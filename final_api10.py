@@ -16,13 +16,13 @@ driver.maximize_window()
 driver.get("https://pre.bonp.me/member/")
 
 driver.find_element(By.CSS_SELECTOR, "#email").send_keys("alexandra@evolany.com")
-driver.find_element(By.CSS_SELECTOR, "#pass").send_keys("221373897qw")
+driver.find_element(By.CSS_SELECTOR, "#pass").send_keys("221373897")
 driver.find_element(By.CSS_SELECTOR, ".show-mail-login").click()
 
 ############ Create bot Api1.0
 driver.find_element(By.XPATH, "//button[@hint='Create a new app']").click()
 driver.find_element(By.XPATH, "//input[@name='name']").clear()
-driver.find_element(By.XPATH, "//input[@name='name']").send_keys("Webdriwer_BabyBot_Api1.0")
+driver.find_element(By.XPATH, "//input[@name='name']").send_keys("Glenn_1011_Api1.0")
 
 modules = driver.find_elements(By.XPATH, "//li[@name='opts']/div/label/input[@type='checkbox']")
 for module in modules[1:]:
@@ -50,6 +50,7 @@ for company in companies:
 
 driver.find_element(By.XPATH, "//button[@class='icon save']").click()
 
+time.sleep(2)
 action = ActionChains(driver)
 action.move_to_element(driver.find_element(By.XPATH, "//button[normalize-space()='New Group']")).perform()
 
@@ -80,7 +81,9 @@ action.move_to_element(driver.find_element(By.XPATH, "//button[normalize-space()
 action.click(driver.find_element(By.XPATH, "//label[normalize-space()='Group']")).send_keys("swipe"+Keys.ENTER).perform()
 
 driver.refresh()
-
+time.sleep(2)
+driver.refresh()
+time.sleep(3)
 ###################### events ################################
 
 navItems = driver.find_elements(By.XPATH, "//nav[@class='btns app-menus']/a")
@@ -89,7 +92,7 @@ for item in navItems:
     if item.get_attribute("name") == "event_list_view":
         item.click()
         break
-
+time.sleep(2)
 driver.find_element(By.XPATH, "//button[@class='new icon plus-square']").click()
 
 driver.find_element(By.XPATH, "//input[@name='linkto']").send_keys("https://www.netflix.com/")
@@ -224,6 +227,7 @@ action.click(driver.find_element(By.XPATH, "//dd[@rt='text']")).send_keys("qr_ch
 
 driver.refresh()
 
+time.sleep(2)
 action = ActionChains(driver)
 action.move_to_element(driver.find_element(By.XPATH, "(//ul[@class='groups']/li/h5)[6]")).perform()
 action.click(driver.find_element(By.XPATH, "(//ul[@class='groups']/li/h5)[6]")).perform()
@@ -665,7 +669,7 @@ autoit.control_set_text("Открытие", "Edit1", r"C:\Users\Professional\Pyc
 time.sleep(3)
 autoit.control_click("Открытие", "Button1")
 ## implement wait
-time.sleep(8)
+time.sleep(10)
 
 driver.find_element(By.XPATH, "(//div[@class='react-btns empty']/label)[6]").click()
 

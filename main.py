@@ -17,12 +17,12 @@ driver.implicitly_wait(5)
 driver.get("https://pre.bonp.me/member/")
 driver.maximize_window()
 driver.find_element(By.CSS_SELECTOR, "#email").send_keys("alexandra@evolany.com")
-driver.find_element(By.CSS_SELECTOR, "#pass").send_keys("221373897qw")
+driver.find_element(By.CSS_SELECTOR, "#pass").send_keys("221373897")
 driver.find_element(By.CSS_SELECTOR, ".show-mail-login").click()
 
 driver.find_element(By.XPATH, "//button[@hint='Create a new app']").click()
 driver.find_element(By.XPATH, "//input[@name='name']").clear()
-driver.find_element(By.XPATH, "//input[@name='name']").send_keys("test_bot")
+driver.find_element(By.XPATH, "//input[@name='name']").send_keys("Glenn_1011_Api1.0")
 
 modules = driver.find_elements(By.XPATH, "//li[@name='opts']/div/label/input[@type='checkbox']")
 for module in modules[1:]:
@@ -40,8 +40,8 @@ for api in apis:
         api.click()
         break
 
-driver.find_element(By.XPATH, "//input[@target_name='com_id']").send_keys("e")
-time.sleep(2)
+driver.find_element(By.XPATH, "//input[@target_name='com_id']").send_keys("Evol")
+time.sleep(3)
 companies = driver.find_elements(By.XPATH, "//ul[@id='form-item-autocomplete']/li")
 for company in companies:
     if company.text == "Evolany Co., Ltd.":

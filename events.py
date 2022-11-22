@@ -13,11 +13,11 @@ driver.maximize_window()
 driver.get("https://pre.bonp.me/member/")
 
 driver.find_element(By.CSS_SELECTOR, "#email").send_keys("alexandra@evolany.com")
-driver.find_element(By.CSS_SELECTOR, "#pass").send_keys("221373897qw")
+driver.find_element(By.CSS_SELECTOR, "#pass").send_keys("221373897")
 driver.find_element(By.CSS_SELECTOR, ".show-mail-login").click()
 
 time.sleep(3)
-driver.find_element(By.XPATH, "//*[contains(text(),'test_bot')]").click()
+driver.find_element(By.XPATH, "//*[contains(text(),'test-br-v2')]").click()
 
 time.sleep(4)
 
